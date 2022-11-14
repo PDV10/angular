@@ -1,0 +1,12 @@
+
+<div class="container d-flex flex-wrap ">
+  <div *ngFor="let Cubo of Cubos" class="card m-2" style="width: 15rem;">
+      <img src="{{Cubo.img}}" class="card-img-top img-cubos" alt="gan 2x2 stickerles">
+      <div class="card-body">
+        <h5 class="card-title"></h5>{{Cubo.nombre}}
+        <p class="card-text">Precio: {{Cubo.precio}}</p>
+        <p class="card-text">Stock: {{Cubo.stock}}</p>
+        <a href="#" class="btn btn-primary">Agregar a Carrito</a>
+      </div>
+  </div>
+</div> 

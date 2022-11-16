@@ -1,0 +1,39 @@
+como cada framework angular cuenta con su propio routing 
+
+este nos ayuda a vincular urls con los diferentes componentes (modificar la url y actualizar el dom sin refrescar la pagina)
+y angular va a implentar automaticamente el partial render, solo nosotros tenemos que decir: que queremos mostrar y donde 
+
+en el routing por cada url se va a relacionar a un unico componente 
+en el caso de que necesitemos vincular 2 componentes para una misma url (lista de compra y carrito)
+lo que debemos hacer es crear un componente padre en donde se encontraran ambos componentes y vinculamos este componente padre a la url 
+
+--------------------
+para usar el router:
+--------------------
+
+
+1) primero hay que crear un archivo con el nombre "app.routes.ts" (en este archivo vamos a tener todas nuestras rutas)
+2) luego hay que importar el routes from @angular/router 
+3) tambien hay que importar los componentes que se van a usar 
+4) y se agregan las rutas (indicando el path que va a tener la url y el componente que va a tener que cargar )
+
+con el comando ng g m "nombre" --routing nos crea automaticamente este archivo 
+
+para indicar donde queremos que se muestre la informacion tenemos que agregar el tag :  <router-outlet> </router-outlet>
+
+en el cual se van a cargar los componentes que indicamos en el router al poner una ruta especifica. 
+en caso de que no lo pongamos siempre nos va a mostrar el mismo componente ignorando la ruta que escribamos 
+
+
+--------
+Links
+--------
+
+para poder armar los links y que funcione el router a la hora de clickearlos se deben agregar 2 directivas dentro del ancor 
+
+   routerLink: que es la direccion a la que vamos ej: "/home o /about" 	(se debe escribir entre corchetes tanto la directiva [routerLink])	
+	remplaza al "href", este sigue funcionando pero, no hace partial render.    (como tambien el path hacia donde queremos ir "['/about']")
+ ej: <a [routerLink]="['/about']"></a>
+	
+ 
+

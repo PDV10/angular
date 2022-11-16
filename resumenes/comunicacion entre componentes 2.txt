@@ -1,0 +1,50 @@
+patron service en angular:
+se usa como un almacenamiento en el que se puede guardar cosas y usarlas cuando sean necesarias 
+
+un servicio se usa para organizar y compartir codigo en la app
+
+los servicios se relacionan con el patron singleton ya que hay 1 solo por todo el proyecto 
+
+para crearlo:
+
+ng generate service "nombre"
+ng g s "nombre"
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+Relacionar service con los componentes
+
+como usarlo:
+hay que usar inyeccion de dependecia 
+
+en el componente que queremos relacionar con el servicio :
+
+en el constructor recibimos el servicio por parametro y lo declaramos de forma privada 
+
+constructor(private cart: BeerCartService){ 
+
+}
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+agregarle funcionalidad al service 
+
+maneja la logica
+
+ 
+-------------------------------------------------------------------------------------------------------------------------------------------
+en el carrito se va a utilizar el patron observable (behavior subject)
+el observable encapsula el valor que se va a observar 
+
+el carrito es el observable que y le va a avisar al que lo observa (los componentes), cada vez que tiene un cambio 
+
+los componentes observan a los services 
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------

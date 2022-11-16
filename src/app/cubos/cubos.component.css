@@ -1,0 +1,6 @@
+img {
+  align-items: center;
+  height: 230px;
+  width: 230px;
+  object-fit: cover;
+}

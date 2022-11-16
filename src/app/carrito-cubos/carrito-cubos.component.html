@@ -1,0 +1,29 @@
+<div class="container ">
+    <table class="table  text-center">
+        <thead >
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        
+        <tbody class="table-group-divider ">
+          <tr  *ngFor="let cubo Of (ListaCarrito$ | async)">
+            <td class="td-img"><img src="../../assets/img/{{cubo.img}}" alt="{{cubo.Nombre}}"></td>
+            <td class="text-center">{{cubo.Nombre}}</td>
+            <td >${{cubo.precio}}</td>
+            <td class="text-center">{{cubo.cantidad}}</td>
+            <td>
+              <button class="btn btn-primary">Comprar</button>
+              <button class="btn btn-danger m-2" (click)="eliminar(cubo)">X</button>
+            </td>
+          </tr>
+         
+        </tbody>
+    </table>
+   
+
+</div>

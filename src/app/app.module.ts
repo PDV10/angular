@@ -7,7 +7,7 @@ import { CarritoCubosComponent } from './carrito-cubos/carrito-cubos.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FiltroCubosComponent } from './filtro-cubos/filtro-cubos.component';
 import { InputNumberComponent } from './input-number/input-number.component';
-import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
 
 const routes: Routes = [
   { path: "",

@@ -1,12 +1,20 @@
 
-<div class="container d-flex flex-wrap ">
-  <div *ngFor="let Cubo of Cubos" class="card m-2" style="width: 15rem;">
-      <img src="{{Cubo.img}}" class="card-img-top img-cubos" alt="gan 2x2 stickerles">
+<div class="container d-flex flex-wrap justify-content-center">
+  <div *ngFor="let cubo of Cubos" class="card m-2 d-flex align-items-center justify-content-center" style="width: 15rem;">
+    <img src="{{cubo.img}}" class="card-img-top img-cubos mt-2 " alt="{{cubo.Nombre}}">
+      
       <div class="card-body">
-        <h5 class="card-title"></h5>{{Cubo.nombre}}
-        <p class="card-text">Precio: {{Cubo.precio}}</p>
-        <p class="card-text">Stock: {{Cubo.stock}}</p>
-        <a href="#" class="btn btn-primary">Agregar a Carrito</a>
-      </div>
+        <h5 class="card-title">{{cubo.Nombre}}</h5>
+
+        <p class="card-text">Precio: {{cubo.precio}}</p>
+        <p class="card-text" *ngIf="cubo.stock > 0">En Stock: {{cubo.stock}}</p>
+        <p class="card-text text-warning bg-dark d-flex justify-content-center" *ngIf="cubo.stock == 0">Sin Stock</p>
+        
+        <app-input-number [(cantidad)]="cubo.cantidad" [stock]="cubo.stock"></app-input-number>
+
+        <button (click)="agregarAlCarrito(cubo)" class="btn btn-primary w-100">Agregar al Carrito</button>
+      </div> 
   </div>
 </div> 
+
+

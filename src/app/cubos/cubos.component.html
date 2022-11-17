@@ -1,12 +1,12 @@
 
-<div class="container d-flex flex-wrap justify-content-center">
+<div class="contenedor container d-flex flex-wrap justify-content-center">
   <div *ngFor="let cubo of Cubos" class="card m-2 d-flex align-items-center justify-content-center" style="width: 15rem;">
     <img src="{{cubo.img}}" class="card-img-top img-cubos mt-2 " alt="{{cubo.Nombre}}">
       
-      <div class="card-body">
+      <div class="card-body ">
         <h5 class="card-title">{{cubo.Nombre}}</h5>
 
-        <p class="card-text">Precio: {{cubo.precio}}</p>
+        <p class="card-text">Precio: ${{cubo.precio}}</p>
         <p class="card-text" *ngIf="cubo.stock > 0">En Stock: {{cubo.stock}}</p>
         <p class="card-text text-warning bg-dark d-flex justify-content-center" *ngIf="cubo.stock == 0">Sin Stock</p>
         

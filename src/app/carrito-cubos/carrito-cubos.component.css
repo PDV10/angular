@@ -7,4 +7,15 @@ img {
     height: 150px;
     width: 150px;
     object-fit: cover;
-  }
+}
+
+thead tr{
+    background-color: #578ee1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+tr{
+    background-color: #79b8e9f0;
+    border: 2px solid rgb(2 2 2 / 65%);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

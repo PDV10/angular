@@ -37,7 +37,7 @@ export class CarritoService {
       }
     }
 
-    console.log("entro " + cubo.id );
+    console.log("elimino cubo con id: " + cubo.id );
   }
 }
 

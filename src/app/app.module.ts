@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FiltroCubosComponent } from './filtro-cubos/filtro-cubos.component';
 import { InputNumberComponent } from './input-number/input-number.component';
 import { HttpClientModule } from "@angular/common/http";
+import { TutorialesCubosComponent } from './tutoriales-cubos/tutoriales-cubos.component';
 
 const routes: Routes = [
   { path: "",
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'filtrado/:categoria',
     component: FiltroCubosComponent,
+  },
+  {
+    path: 'tutoriales',
+    component: TutorialesCubosComponent,
   }
 ];
 
@@ -36,6 +41,7 @@ const routes: Routes = [
     CarritoCubosComponent,
     FiltroCubosComponent,
     InputNumberComponent,
+    TutorialesCubosComponent,
   ],
   imports: [
     BrowserModule,

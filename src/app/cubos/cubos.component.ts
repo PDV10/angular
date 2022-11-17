@@ -9,17 +9,18 @@ import { Cubos } from './Cubos';
   styleUrls: ['./cubos.component.css']
 })
 export class CubosComponent implements OnInit {
- 
   Cubos: Cubos[] = [];
 
-  constructor(private carrito: CarritoService, private data: DataCubosService) { }
-  
-  ngOnInit(): void {
-    this.data.getAll().subscribe( c => this.Cubos = c); 
+  constructor(private carrito: CarritoService, private data: DataCubosService) { 
+    this.data.getAll().subscribe( c => this.Cubos = c);    
   }
   
-    agregarAlCarrito(cubo: Cubos): void{
-      this.carrito.agregarAlCarrito(cubo);
-      cubo.stock -= cubo.cantidad;
-    }
+  ngOnInit(): void {     
+  }
+
+  
+  agregarAlCarrito(cubo: Cubos): void{
+    this.carrito.agregarAlCarrito(cubo);
+    cubo.stock -= cubo.cantidad;
+  }
 }

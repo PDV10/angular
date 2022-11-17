@@ -3,4 +3,9 @@ img {
   height: 230px;
   width: 230px;
   object-fit: cover;
+  background: fixed;
+}
+
+.card-body{
+  background-color: rgb(167 220 240);
 }

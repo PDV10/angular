@@ -12,7 +12,7 @@
         
         <tbody class="table-group-divider ">
           <tr  *ngFor="let cubo Of (ListaCarrito$ | async)">
-            <td class="td-img"><img src="../../assets/img/{{cubo.img}}" alt="{{cubo.Nombre}}"></td>
+            <td class="td-img"><img src="{{cubo.img}}" alt="{{cubo.Nombre}}"></td>
             <td class="text-center">{{cubo.Nombre}}</td>
             <td >${{cubo.precio}}</td>
             <td class="text-center">{{cubo.cantidad}}</td>

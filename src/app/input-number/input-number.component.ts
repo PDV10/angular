@@ -22,7 +22,7 @@ export class InputNumberComponent implements OnInit {
   }
 
   descontarCant(): void{
-    if(this.cantidad > 0){
+    if(this.cantidad > 1){
       this.cantidad--;
       this.cantidadChange.emit(this.cantidad);
     } 

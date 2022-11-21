@@ -17,4 +17,5 @@ export class DataCubosService {
     let cubos = this.http.get<Cubos[]>(URL)
     return cubos;
   }
+
 }

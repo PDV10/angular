@@ -14,16 +14,15 @@ export class CarritoService {
 
   agregarAlCarrito(cubo: Cubos) {
     let item: Cubos | undefined= this._ListaCarrito.find((v1) => v1.Nombre == cubo.Nombre);
-   
+
       if(!item ){
-        this._ListaCarrito.push({... cubo});
+          this._ListaCarrito.push({... cubo});
       }else{
         item.cantidad += cubo.cantidad;
       }
-      
-      if(item?.cantidad != 0){
-        this.ListaCarrito.next(this._ListaCarrito); //equivale al emmit de eventos
-      }
+    
+      this.ListaCarrito.next(this._ListaCarrito); //equivale al emmit de eventos
+    
   }
 
   eliminar(cubo: Cubos){
@@ -36,7 +35,6 @@ export class CarritoService {
         }
       }
     }
-
     console.log("elimino cubo con id: " + cubo.id );
   }
 }
